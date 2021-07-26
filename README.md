@@ -3,7 +3,7 @@ These scripts can be used to expand the automation capabilities of CME created g
 
 ## CME Configuration
 - autoprov_cfg set management -cs /home/admin/cme_helper.sh
-- autoprov_cfg set template -tn <Template Name> <Enabled Blades> -cg /home/admin/gw_helper.sh
+- autoprov_cfg set template -tn (Template Name) (Enabled Blades) -cg /home/admin/gw_helper.sh
  
 ## Order of Operations
 - CME Detects and Creates Gateway Object
