@@ -24,8 +24,8 @@ then
     JSON_OUTPUT=$(mgmt_cli --session-id $SID set-generic-object uid $GW_UID identityAwareBlade.iaMaxEnforcedIdentities 200000 identityAwareBlade.iaMaxAuthenticatedUsers 200000 -f json)
     if [ $DEBUG = true ]; then echo "[ DEBUG ] $JSON_OUTPUT" >> $LOG;fi
 
-    echo "[ $(date +"%T") $GW_NAME ] - Setting Content Awareness Blade"  >> $LOG
-    JSON_OUTPUT=$(mgmt_cli --session-id $SID set simple-gateway name $GW_NAME content-awareness true -f json)
+    echo "[ $(date +"%T") $GW_NAME ] - Setting Content Awareness Blade and Threat Extraction"  >> $LOG
+    JSON_OUTPUT=$(mgmt_cli --session-id $SID set simple-gateway name $GW_NAME content-awareness true threat-extraction true -f json)
     if [ $DEBUG = true ]; then echo "[ DEBUG ] $JSON_OUTPUT" >> $LOG;fi
 
     echo "[ $(date +"%T") $GW_NAME ] - Publishing Session"  >> $LOG
